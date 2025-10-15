@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego: Encuentra las diferencias</title>
+  <link rel="stylesheet" href="juego.css">
+</head>
+<body>
+  <div class="contenedor">
+    <h1>🎭ENCUENTRA LAS DIFERENCIAS👀</h1>
+
+    <!-- Marcadores -->
+    <div class="barra_superior">
+      <div>Diferencias restantes: <p id="dif_restantes">4</p></div>
+      <div>Vidas: <p id="vidas">3</p> </div>
+    </div
+
+    <!-- Contenedor de imágenes -->
+    <div class="contenedor_imagenes">
+      <!-- Imagen izquierda -->
+      <div class="image-box">
+        <img src="IMAGENES/frontis (2).jpg" usemap="#map1" id="leftImg" alt="Imagen izquierda" >
+        <map name="map1">
+          <!-- Coordenadas correctas -->
+            <area shape="circle" coords="262,138,25" href="#" onclick="diferencia_encontrada(event,1)">
+          <area shape="circle" coords="310,440,25" href="#" onclick="diferencia_encontrada(event,2)">
+          <area shape="circle" coords="146,402,25" href="#" onclick="diferencia_encontrada(event,3)">
+          <area shape="circle" coords="78,424,25" href="#" onclick="diferencia_encontrada(event,4)">
+          <area shape="circle" coords="355,366,25" href="#" onclick="diferencia_encontrada(event,5)">
+        
+          <!-- Área general para errores -->
+          <area shape="rect" coords="0,0,330,210" href="#" onclick="click_erroneo(event)">
+        </map>
+        <!-- Marcadores de diferencias -->
+        <div class="marks" id="marks-left"></div>
+      </div>
+
+      <!-- Imagen derecha -->
+      <div class="image-box">
+        <img src="IMAGENES/imagen.png" usemap="#map2" id="rightImg" alt="Imagen derecha" >
+        <map name="map2">
+          <!-- Coordenadas correctas -->
+         <area shape="circle" coords="262,138,25" href="#" onclick="diferencia_encontrada(event,1)">
+          <area shape="circle" coords="310,440,25" href="#" onclick="diferencia_encontrada(event,2)">
+          <area shape="circle" coords="146,402,25" href="#" onclick="diferencia_encontrada(event,3)">
+          <area shape="circle" coords="78,424,25" href="#" onclick="diferencia_encontrada(event,4)">
+          <area shape="circle" coords="355,366,25" href="#" onclick="diferencia_encontrada(event,5)">
+          
+          <!-- Área general para errores -->
+          <area shape="rect" coords="0,0,330,210" href="#" onclick="click_erroneo(event)">
+        </map>
+        <div class="marks" id="marks-right"></div>
+      </div>
+    </div>
+
+    <!-- Mensaje -->
+    <p id="message"></p>
+  </div>
+<h1>
+
+</h1>
+  <script src="script.js"></script>
+</body>
+</html>
